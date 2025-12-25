@@ -35,7 +35,7 @@
 1. **克隆项目**
 
 ```bash
-git clone <项目仓库地址>
+git clone [<项目仓库地址>](https://github.com/lyh1091106900/donkjs.git)
 cd donkjs
 ```
 
@@ -53,14 +53,7 @@ npm run build
 
 ## 快速开始
 
-### 开发环境
-
-```bash
-# 启动开发服务器（需要先编译）
-npm run build && node dist/front.js
-```
-
-### 生产环境
+### 开发环境 && 生产环境
 
 使用 PM2 启动服务：
 
