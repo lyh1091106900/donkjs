@@ -8,13 +8,16 @@
  */
 
 import { GlobalVarComponent } from "../component/GlobalVarComponent";
+import { SysCfgComponent } from "../component/SysCfgComponent";
 
 export enum EComName {
   GlobalVarComponent = "GlobalVarComponent",
+  SysCfgComponent = "SysCfgComponent",
 }
 
 export const EComNameType = {
   [EComName.GlobalVarComponent]: GlobalVarComponent,
+  [EComName.SysCfgComponent]: SysCfgComponent,
 };
 export interface IBaseComponent {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -64,7 +67,7 @@ export class ComponentManager {
 
   // 获取组件时，通过类型断言来访问具体组件的类型
   getComponent<K extends EComName>(
-    key: K,
+    key: K
   ): InstanceType<(typeof EComNameType)[K]> {
     return this.components.get(key) as InstanceType<(typeof EComNameType)[K]>;
   }

@@ -13,6 +13,7 @@ import { ServerGlobals } from "./common/ServerGlobal";
 import { websocketGameServer } from "./common/WebsocketGameServer";
 
 import { GlobalVarComponent } from "./component/GlobalVarComponent";
+import { SysCfgComponent } from "./component/SysCfgComponent";
 
 import { gameLogger, gameLogger as logger } from "./util/logger";
 import { stopFrontServer } from "./util/tool";
@@ -41,6 +42,10 @@ async function main() {
     EComName.GlobalVarComponent,
     globalVarComp
   );
+
+  const sysCfgComp: SysCfgComponent = new SysCfgComponent();
+  gameLogger.debug("sysCfgComp-------->");
+  ComponentManager.instance.register(EComName.SysCfgComponent, sysCfgComp);
 
   /*-----------------------------com begin--------------------------------------*/
 

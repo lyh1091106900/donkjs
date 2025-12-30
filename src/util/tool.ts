@@ -18,3 +18,13 @@ export async function stopFrontServer() {
 export function getUniqueID(user: UserInfo): string {
   return `${user.zone}:${user.uid}`;
 }
+
+export function getBaseConfigPath(
+  environment: string,
+  serverProvide: string
+): string {
+  if (serverProvide) {
+    return `../sysconfig/${environment}/${serverProvide}/`;
+  }
+  return `../sysconfig/${environment}/`;
+}
