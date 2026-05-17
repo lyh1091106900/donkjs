@@ -27,7 +27,7 @@ export class SysCfgComponent implements IBaseComponent {
 
   async start() {
     const globalVarComp = ComponentManager.instance.getComponent(
-      EComName.GlobalVarComponent
+      EComName.GlobalVarComponent,
     );
     const globalVar = globalVarComp.globalVar;
     this.setZoneConfig(globalVar);

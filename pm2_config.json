@@ -17,6 +17,25 @@
       },
       "node_args": "--inspect=41002",
       "cwd": "./dist"
+    },
+    {
+      "name": "bun_front_1",
+      "script": "src/front.ts",
+      "interpreter": "bun",
+      "args": ["--inspect=41002"],
+      "env": {
+        "id": "front_1",
+        "internalIP": "127.0.0.1",
+        "gameType": "front",
+        "publicIP": "127.0.0.1",
+        "shutdown_with_message": true,
+        "connectionTickTimeout": "3000",
+        "environment": "development",
+        "group": "1",
+        "port": 41001,
+        "httpPort": 41000
+      },
+      "cwd": "./"
     }
   ]
 }

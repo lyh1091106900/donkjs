@@ -32,83 +32,21 @@
         "type": "pattern",
         "pattern": "%[ [%r] [%p] [%f:%l] %] -- %m"
       }
-    },
-    "csv": {
-      "filename": "../logs/csv.log",
-      "type": "util/LoggerCsvDateRollingAppender",
-      "numBackups": 7,
-      "encoding": "utf8",
-      "layout": {
-        "type": "pattern",
-        "pattern": "[%r] [%p] [%f:%l] -- %m"
-      },
-      "header": [
-        "date",
-        "level",
-        "logger",
-        "message"
-      ],
-      "pattern": "yyyy-MM-dd-hh-mm",
-      "keepFileExt": true,
-      "alwaysIncludePattern": true
-    },
-    "prop_history_csv": {
-      "filename": "../logs/prop_history.csv",
-      "type": "util/LoggerCsvDateRollingAppender",
-      "numBackups": 7,
-      "encoding": "utf8",
-      "layout": {
-        "type": "messagePassThrough"
-      },
-      "header": [
-        "date",
-        "changeData",
-        "nowData",
-        "beforeData",
-        "source"
-      ],
-      "pattern": "yyyy-MM-dd",
-      "keepFileExt": true,
-      "alwaysIncludePattern": true
     }
   },
   "categories": {
     "default": {
-      "appenders": [
-        "game"
-      ],
+      "appenders": ["game"],
       "enableCallStack": true,
       "level": "debug"
     },
     "server": {
-      "appenders": [
-        "server",
-        "console"
-      ],
+      "appenders": ["server", "console"],
       "enableCallStack": true,
       "level": "debug"
     },
     "game": {
-      "appenders": [
-        "game",
-        "console"
-      ],
-      "enableCallStack": true,
-      "level": "debug"
-    },
-    "csv": {
-      "appenders": [
-        "csv",
-        "console"
-      ],
-      "enableCallStack": true,
-      "level": "debug"
-    },
-    "prop_history_csv": {
-      "appenders": [
-        "prop_history_csv",
-        "console"
-      ],
+      "appenders": ["game", "console"],
       "enableCallStack": true,
       "level": "debug"
     }

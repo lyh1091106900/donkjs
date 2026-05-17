@@ -10,12 +10,13 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "declaration": false
+    "declaration": false,
+    "types": ["node"]
   },
   "exclude": ["node_modules", "dist", "build"],
   "include": ["src"]

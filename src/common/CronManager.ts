@@ -12,14 +12,14 @@ const jobList: CronJob[] = [];
 export function registerJob(
   cronStr: string,
   func: CronCommand<null, boolean>,
-  timeZone: string = "Asia/Shanghai",
+  timeZone: string = "Asia/Shanghai"
 ) {
   const job = new CronJob(
     cronStr, // cronTime
     func, // onTick
     undefined, // onComplete
     true, // start
-    timeZone, // timeZone
+    timeZone // timeZone
   );
   jobList.push(job);
 }
