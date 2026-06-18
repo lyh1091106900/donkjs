@@ -19,7 +19,7 @@
     "sinon": "^21.0.1",
     "swagger-ui-express": "^5.0.1",
     "tsrpc-cli": "^2.4.5",
-    "typescript": "^6.0.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "bull": "^4.16.5",
