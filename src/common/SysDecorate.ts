@@ -12,7 +12,8 @@ import { concatMap } from "rxjs/operators";
 import { TsrpcError } from "tsrpc";
 
 import { BadCode } from "../shared/type/Type";
-import { ComponentManager, EComName } from "./BaseComponent";
+import { ComponentManager } from "./BaseComponent";
+import { EComName } from "./CComponent";
 
 const userQueues: Map<
   string,

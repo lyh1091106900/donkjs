@@ -9,16 +9,8 @@
 
 import { GlobalVarComponent } from "../component/GlobalVarComponent";
 import { SysCfgComponent } from "../component/SysCfgComponent";
+import { EComName, EComNameType } from "./CComponent";
 
-export enum EComName {
-  GlobalVarComponent = "GlobalVarComponent",
-  SysCfgComponent = "SysCfgComponent",
-}
-
-export const EComNameType = {
-  [EComName.GlobalVarComponent]: GlobalVarComponent,
-  [EComName.SysCfgComponent]: SysCfgComponent,
-};
 export interface IBaseComponent {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   init: (option: any) => void;

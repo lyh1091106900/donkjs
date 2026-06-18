@@ -6,11 +6,7 @@
  * @LastEditors: lyh
  * @LastEditTime: 2025-01-09 18:00:36
  */
-import {
-  ComponentManager,
-  EComName,
-  IBaseComponent,
-} from "../../common/BaseComponent";
+import { ComponentManager, IBaseComponent } from "../../common/BaseComponent";
 import {
   getGlobalModelManager,
   initializeGlobalModel,
@@ -28,6 +24,7 @@ import {
   stopAllZoneConnection,
 } from "../../dbservice/model/ZoneDBModel";
 import { gameLogger as logger } from "../../util/logger";
+import { EComName } from "../../common/CComponent";
 
 export class MongoComponent implements IBaseComponent {
   init() {}

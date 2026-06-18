@@ -20,7 +20,6 @@ import { ServerGlobals } from "./ServerGlobal";
 import { BadCode, eUserNotice, UserInfo } from "../shared/type/Type";
 import { gameLogger } from "../util/logger";
 import { getUniqueID } from "../util/tool";
-import { ComponentManager, EComName } from "./BaseComponent";
 
 export class WebsocketGameServer {
   public server!: WsServer<ServiceType_Public>;
@@ -110,14 +109,14 @@ export class WebsocketGameServer {
     this.reportServerState();
 
     await this.server.autoImplementApi(
-      path.resolve(__dirname, "../api/public/front"),
+      path.resolve(__dirname, "../api/public/front")
     );
   }
 
   async start() {
     await this.server.start();
     this.logger.log(
-      chalk.green(`WebsocketGameServer started at ${this.options.port}`),
+      chalk.green(`WebsocketGameServer started at ${this.options.port}`)
     );
   }
 
@@ -156,7 +155,7 @@ export const websocketGameServer = new WebsocketGameServer();
 
 export function sendUsersNotice(
   users: Array<UserInfo>,
-  noticeType: eUserNotice,
+  noticeType: eUserNotice
 ) {
   users.forEach((user) => {
     const deleteUserConn: GameClientConn =
@@ -170,7 +169,7 @@ export function sendOnlineUsersNotice(zone: string[], noticeType: eUserNotice) {
     (item) => {
       if (item.user?.zone) return zone.includes(item.user.zone);
       return false;
-    },
+    }
   );
   usersConn.forEach((conn) => conn.sendMsg("UserNotice", { noticeType }));
 }

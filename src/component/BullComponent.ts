@@ -1,11 +1,7 @@
 import Bull from "bull";
 import { Logger } from "log4js";
-import {
-  ComponentManager,
-  EComName,
-  IBaseComponent,
-} from "../common/BaseComponent";
-
+import { ComponentManager, IBaseComponent } from "../common/BaseComponent";
+import { EComName } from "../common/CComponent";
 export class BullComponent implements IBaseComponent {
   // Bull queue instance for managing jobs
   private queue: Bull.Queue;

@@ -7,7 +7,8 @@
  * @LastEditTime: 2025-01-08 10:06:01
  */
 
-import { ComponentManager, EComName } from "./common/BaseComponent";
+import { ComponentManager } from "./common/BaseComponent";
+import { EComName } from "./common/CComponent";
 
 import { ServerGlobals } from "./common/ServerGlobal";
 import { websocketGameServer } from "./common/WebsocketGameServer";

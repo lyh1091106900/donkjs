@@ -12,7 +12,7 @@ import { ServerGlobals } from "../common/ServerGlobal";
 import { TstatusString } from "../shared/type/Type";
 
 import { stopFrontServer } from "../util/tool";
-
+import { EComName } from "../common/CComponent";
 export class GlobalVarComponent implements IBaseComponent {
   private _status: TstatusString = "normal";
   init(globalVar: ServerGlobals) {

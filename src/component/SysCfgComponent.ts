@@ -6,17 +6,13 @@
  * @LastEditors: lyh
  * @LastEditTime: 2025-01-07 14:09:33
  */
-import {
-  ComponentManager,
-  EComName,
-  IBaseComponent,
-} from "../common/BaseComponent";
+import { ComponentManager, IBaseComponent } from "../common/BaseComponent";
 import { DBCfg, RedisCfg, ZoneCfg as ServerCfg } from "../common/CommonType";
 import { ServerGlobals } from "../common/ServerGlobal";
 import { gameLogger as logger } from "../util/logger";
 // import { schema as DBConfig } from '../json_schemas/db_config';
 import { loadSysConfigJson } from "../util/load_json";
-
+import { EComName } from "../common/CComponent";
 export class SysCfgComponent implements IBaseComponent {
   private _db_global!: DBCfg;
   private _db_server_map: Map<string, DBCfg> = new Map();
@@ -27,7 +23,7 @@ export class SysCfgComponent implements IBaseComponent {
 
   async start() {
     const globalVarComp = ComponentManager.instance.getComponent(
-      EComName.GlobalVarComponent,
+      EComName.GlobalVarComponent
     );
     const globalVar = globalVarComp.globalVar;
     this.setZoneConfig(globalVar);

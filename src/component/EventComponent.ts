@@ -10,7 +10,7 @@ import { Subject } from "rxjs";
 import { IBaseComponent } from "../common/BaseComponent";
 import { TTaskDelta } from "../common/CommonType";
 import { gameLogger } from "../util/logger";
-
+import { EComName } from "../common/CComponent";
 export class EventComponent implements IBaseComponent {
   private _taskEvent!: Subject<TTaskDelta>;
 
